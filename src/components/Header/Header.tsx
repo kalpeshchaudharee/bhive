@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '/src/assets/Logo.png'
-import Call from '/src/assets/Call.svg'
+import Call from '/src/assets/call.svg'
 
 const Header: React.FC = () => {
   return (
