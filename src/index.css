@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #F9FAFF;
+}
+
+h1, h2, h3 {
+  @apply text-heading;
+}
+
+h2 {
+  @apply font-bold md:text-4xl text-2xl leading-[2.813rem] tracking-[0.3px];
+}
