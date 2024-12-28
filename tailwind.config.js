@@ -17,7 +17,11 @@ export default {
       white: "#FFF",
       heading: "#263238",
     },
-    extend: {},
+    extend: {
+      screens: {
+        'sm': '540px',
+      },
+    },
   },
   plugins: [],
 }

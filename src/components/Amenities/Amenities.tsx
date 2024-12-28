@@ -9,50 +9,29 @@ import QuickBooking from '/src/assets/amenities/QuickBooking.png';
 import SportsArea from '/src/assets/amenities/SportsArea.png';
 
 const Amenities: React.FC = () => {
+
+    const amenityList = [
+        {img: CommunityEvents, name: 'Community Events'},
+        {img: Gym, name: 'Gym Facilities'},
+        {img: Wifi, name: 'High-Speed WiFi'},
+        {img: Cafe, name: 'Cafe & Tea Bar'},
+        {img: Affordable, name: 'Affordable'},
+        {img: Lounges, name: 'Comfort Lounges'},
+        {img: QuickBooking, name: 'Quick Booking'},
+        {img: SportsArea, name: 'Sports Area'},
+    ]
   return (
     <section className='md:mb-24 pb-6 px-5 md:px-[7.5rem]'>
         <h2 className='mb-[1.875rem] md:mb-[5.313rem]'>Why Choose us?</h2>
 
-        <div className='md:flex md:flex-wrap max-md:grid max-md:grid-cols-2 max-md:gap-3'>
-            <div className='md:flex md:p-6 md:w-[18.75rem] p-2 gap-4 w-[9.625rem] max-md:rounded-md max-md:bg-white text-center'>
-                <img src={CommunityEvents} alt="Community Events" className='my-auto mx-auto md:mx-0 max-md:mb-3' />
-                <label className='text-sm leading-4 md:text-lg md:leading-[1.361rem] font-medium md:my-auto'>Community Events</label>
-            </div>
+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-3 xl:grid-cols-4'>
 
-            <div className='md:flex md:p-6 md:w-[18.75rem] p-2 gap-4 w-[9.625rem] max-md:rounded-md max-md:bg-white text-center'>
-                <img src={Gym} alt="Gym Facilities" className='my-auto mx-auto md:mx-0 max-md:mb-3' />
-                <label className='text-sm leading-4 md:text-lg md:leading-[1.361rem] font-medium md:my-auto'>Gym Facilities</label>
-            </div>
-
-            <div className='md:flex md:p-6 md:w-[18.75rem] p-2 gap-4 w-[9.625rem] max-md:rounded-md max-md:bg-white text-center'>
-                <img src={Wifi} alt="High-Speed WiFi" className='my-auto mx-auto md:mx-0 max-md:mb-3' />
-                <label className='text-sm leading-4 md:text-lg md:leading-[1.361rem] font-medium md:my-auto'>High-Speed WiFi</label>
-            </div>
-
-            <div className='md:flex md:p-6 md:w-[18.75rem] p-2 gap-4 w-[9.625rem] max-md:rounded-md max-md:bg-white text-center'>
-                <img src={Cafe} alt="Cafe & Tea Bar" className='my-auto mx-auto md:mx-0 max-md:mb-3' />
-                <label className='text-sm leading-4 md:text-lg md:leading-[1.361rem] font-medium md:my-auto'>Cafe & Tea Bar</label>
-            </div>
-
-            <div className='md:flex md:p-6 md:w-[18.75rem] p-2 gap-4 w-[9.625rem] max-md:rounded-md max-md:bg-white text-center'>
-                <img src={Affordable} alt="Affordable" className='my-auto mx-auto md:mx-0 max-md:mb-3' />
-                <label className='text-sm leading-4 md:text-lg md:leading-[1.361rem] font-medium md:my-auto'>Affordable</label>
-            </div>
-
-            <div className='md:flex md:p-6 md:w-[18.75rem] p-2 gap-4 w-[9.625rem] max-md:rounded-md max-md:bg-white text-center'>
-                <img src={Lounges} alt="Lounges" className='my-auto mx-auto md:mx-0 max-md:mb-3' />
-                <label className='text-sm leading-4 md:text-lg md:leading-[1.361rem] font-medium md:my-auto'>Comfort Lounges</label>
-            </div>
-
-            <div className='md:flex md:p-6 md:w-[18.75rem] p-2 gap-4 w-[9.625rem] max-md:rounded-md max-md:bg-white text-center'>
-                <img src={QuickBooking} alt="Quick Booking" className='my-auto mx-auto md:mx-0 max-md:mb-3' />
-                <label className='text-sm leading-4 md:text-lg md:leading-[1.361rem] font-medium md:my-auto'>Quick Booking</label>
-            </div>
-
-            <div className='md:flex md:p-6 md:w-[18.75rem] p-2 gap-4 w-[9.625rem] max-md:rounded-md max-md:bg-white text-center'>
-                <img src={SportsArea} alt="Sports Area" className='my-auto mx-auto md:mx-0 max-md:mb-3' />
-                <label className='text-sm leading-4 md:text-lg md:leading-[1.361rem] font-medium md:my-auto'>Sports Area</label>
-            </div>
+            {amenityList.map((amenity) => (
+                <div key={amenity.name} className='md:flex md:p-6 md:w-[18.75rem] p-2 gap-4 w-[9.625rem] max-md:rounded-md max-md:bg-white max-sm:mx-auto text-center'>
+                    <img src={amenity.img} alt="Sports Area" className='my-auto mx-auto md:mx-0 max-md:mb-3' />
+                    <label className='text-sm leading-4 md:text-lg md:leading-[1.361rem] font-medium md:my-auto'>{amenity.name}</label>
+                </div>
+            ))}
         </div>
     </section>
   );
