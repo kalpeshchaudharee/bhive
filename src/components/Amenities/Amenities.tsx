@@ -7,6 +7,7 @@ import Affordable from '/src/assets/amenities/Affordable.png';
 import Lounges from '/src/assets/amenities/Lounges.png';
 import QuickBooking from '/src/assets/amenities/QuickBooking.png';
 import SportsArea from '/src/assets/amenities/SportsArea.png';
+import Arrow3 from '/src/assets/Arrow 3.png';
 
 const Amenities: React.FC = () => {
 
@@ -21,8 +22,8 @@ const Amenities: React.FC = () => {
         {img: SportsArea, name: 'Sports Area'},
     ]
   return (
-    <section className='md:mb-24 pb-6 px-5 md:px-[7.5rem]'>
-        <h2 className='mb-[1.875rem] md:mb-[5.313rem]'>Why Choose us?</h2>
+    <section className='md:mb-24 pb-6 px-5 lg:px-[7.5rem]'>
+        <h2 className='mb-[1.875rem] md:mb-[5.313rem] flex'>Why Choose us? <img src={Arrow3} alt="Arrow" className='ml-auto my-auto' /></h2>
 
         <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-3 xl:grid-cols-4'>
 

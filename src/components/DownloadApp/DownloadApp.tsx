@@ -3,13 +3,14 @@ import DownloadAppImg from '/src/assets/DownloadAppBig.png'
 import DownloadAppSmall from '/src/assets/DownloadAppSmall.png'
 import GooglePlay from '/src/assets/GooglePlay.png'
 import AppStore from '/src/assets/AppStore.png'
+import Arrow3 from '/src/assets/Arrow 3.png'
 
 const DownloadApp: React.FC = () => {
   return (
     <>
 
-        <div className='px-5 md:px-[7.5rem] mb-8'>
-            <h2 className='text-2xl mb-12'>Download our app now</h2>
+        <div className='px-5 lg:px-[7.5rem] mb-8'>
+            <h2 className='text-2xl mb-12 flex'>Download our app now <img src={Arrow3} alt="Arrow" className='ml-auto my-auto md:hidden max-md:visible' /></h2>
 
             <div className='max-md:bg-white py-7 rounded-lg max-md:border-[0.5px] max-md:border-gray-200'>
                 <img src={DownloadAppImg} alt="Download App" className='max-xl:mx-auto px-5 md:px-[7.5rem] md:visible max-md:hidden mb-10 xl:-mb-80' />

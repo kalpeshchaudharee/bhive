@@ -1,6 +1,7 @@
 import React from 'react';
 import Direction from '/src/assets/Direction.png';
 import Arrow from '/src/assets/Arrow.png';
+import Arrow3 from '/src/assets/Arrow 3.png';
 import { useFetchContext } from '../../contexts/FetchContext';
 interface Product {
     id: number;
@@ -19,7 +20,7 @@ const Products: React.FC = () => {
     return (
         <section className='px-5 lg:px-[7.5rem] max-md:mb-12 mb-20'>
             <h2 className='mb-10 md:visible max-md:hidden'>Our Space Overview</h2>
-            <h2 className='mb-[1.875rem] md:hidden max-md:visible'>Our Spaces</h2>
+            <h2 className='mb-[1.875rem] md:hidden max-md:visible flex'>Our Spaces <img src={Arrow3} alt="Arrow" className='ml-auto my-auto' /></h2>
 
             <div className='md:grid md:grid-cols-2 xl:grid-cols-3 xl:gap-[2.813rem] flex flex-wrap gap-4'>
             {data?.map(item => (
